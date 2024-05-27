@@ -19,7 +19,7 @@ This optional feature provides real-time monitoring of your Quilibrium node and 
 
 * Execute the following command to install the watchdog on the target node:
 ```
-./qtools.sh install_watchdog <target> auto_restart=<auto_restart> telegram_id=<telegram_chat_id> discord_webhook=<discord_webhook> publish_level=<level>
+./qtools.sh install_watchdog <target> auto_restart=<auto_restart> telegram_id=<telegram_chat_id> discord_webhook=<discord_webhook> publish_level=<level> mqtt_broker=<mqtt_address> mqtt_port=<1883> mqtt_user=<mqtt_user> mqtt_password=<mqtt_pass>
 ```
 Where:
 
@@ -28,6 +28,12 @@ Where:
 * ```telegram_id=<telegram_chat_id>```: (optional) your Telegram chat ID (see instructions below).
 * ```discord_webhook=<discord_webhook>```: (optional) your Discord webhook url (see instructions below).
 * ```publish_level=<level>```: (optional) choose ```all``` to receive notifications for all events, or none to disable notifications.
+* ```mqtt_broker=<address>```: (optional) Put your Mqtt Broker Server address.
+* ```mqtt_port=<port>```: (optional) Put your Mqtt Broker Port.
+* ```mqtt_user=<user>```: (optional) Put your Mqtt User.
+* ```mqtt_password=<user>```: (optional) Put your Mqtt Password.
+
+
 
 ## Notes about Telegram 
 
