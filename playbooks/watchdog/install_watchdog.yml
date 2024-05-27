@@ -90,6 +90,42 @@
         state: present
       when: discord_webhook is defined
 
+    - name: Set mqtt_broker parameter
+      ini_file:
+        path: "{{ watchdog }}/.env"
+        option: MQTT_BROKER
+        section: notification
+        value: "{{ mqtt_broker }}"
+        state: present
+      when: mqtt_broker is defined
+
+    - name: Set mqtt_port parameter
+      ini_file:
+        path: "{{ watchdog }}/.env"
+        option: MQTT_PORT
+        section: notification
+        value: "{{ mqtt_port }}"
+        state: present
+      when: mqtt_port is defined
+
+    - name: Set mqtt_user parameter
+      ini_file:
+        path: "{{ watchdog }}/.env"
+        option: MQTT_USER
+        section: notification
+        value: "{{ mqtt_user }}"
+        state: present
+      when: mqtt_user is defined
+
+    - name: Set mqtt_password parameter
+      ini_file:
+        path: "{{ watchdog }}/.env"
+        option: MQTT_PASSWORD
+        section: notification
+        value: "{{ mqtt_password }}"
+        state: present
+      when: mqtt_password is defined
+
     - name: Install watchdog service
       become: true
       shell: |
