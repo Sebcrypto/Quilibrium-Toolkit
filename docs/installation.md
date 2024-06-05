@@ -17,8 +17,8 @@ Here are the details of what it does:
 ## System Configuration Updates
 * The script modifies the system configuration file `/etc/sysctl.conf` to include the following parameters:
 ```
-net.core.rmem_max=7500000
-net.core.wmem_max=7500000
+net.core.rmem_max=600000000
+net.core.wmem_max=600000000
 ```
 These parameters adjust the network buffer sizes to potentially improve Quilibrium's performance.
 
