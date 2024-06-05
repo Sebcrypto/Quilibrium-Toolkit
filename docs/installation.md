@@ -97,6 +97,10 @@ To use it on node, simply run the command, no matter what directory you are in:
 ```
 quil
 ```
+or
+```
+quil journal
+```
 
 * Start the node :
 ```
